@@ -72,10 +72,15 @@ export default class SearchPool extends Component<SearchPoolProps, SearchPoolSta
     }
 
     render() {
-        const {newsList, loader} = this.state
+        const { newsList, loader } = this.state
+        const { searchQuery } = this.props
 
-        if (loader){
+        if (loader) {
             return <Loader />
+        }
+
+        if (searchQuery === '') {
+            return <h4>Please enter your query on field in the top right corner.</h4>
         }
 
         if (newsList.length === 0){

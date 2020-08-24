@@ -46,3 +46,23 @@ a:hover{
     color: #4d7b7f;
     transition: 0.3s;
 }
+
+.card-h5{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    -webkit-box-orient: vertical;
+}
+
+.card-p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 6; /* number of lines to show */
+    -webkit-box-orient: vertical;
+}
+
+.more-button{
+    margin-bottom: 1rem;
+}

@@ -19,7 +19,8 @@ interface Article {
     title: string,
     description: string,
     url: string,
-    image: string
+    image: string,
+    content: string
 }
 
 export default class NewsCardsPool extends Component<NewsCardsPoolProps, NewsCardsPoolStates> {
@@ -65,7 +66,7 @@ export default class NewsCardsPool extends Component<NewsCardsPoolProps, NewsCar
             return <Loader />
         }
 
-        if (newsList.length === 0){
+        if (typeof newsList === "undefined"){
             return <h4>Sorry there is no News on your demand.</h4>
         }
 

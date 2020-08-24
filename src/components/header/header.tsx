@@ -27,7 +27,6 @@ export default class Header extends Component<headerProps, headerState>{
     }
 
     componentDidMount() {
-        console.log('props: ', this.props.pathname)
         this.setState({
             currentLocation: this.props.pathname
         })

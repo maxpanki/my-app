@@ -11,10 +11,6 @@ interface Article {
     content: string
 }
 
-interface LooseObject {
-    [key: string]: any
-}
-
 export default class NewsService {
 
     newsapi: any
@@ -43,16 +39,6 @@ export default class NewsService {
             sortBy: 'popularity'
         })
          return await news.articles.map(this._transformArticle)
-    }
-
-    getByQuery(query: string) {
-        let newsList: any[] = []
-
-        newsList = this.categorylist.map((category: string) => {
-
-        })
-
-        return newsList
     }
 
 
