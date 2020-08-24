@@ -1,6 +1,11 @@
-.navbar.bg-light {
-    border: none;
-}
 a {
     cursor: pointer;
+}
+
+.header{
+    margin-top: 2rem;
+}
+
+.navbar.bg-light {
+    border: none;
 }

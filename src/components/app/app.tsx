@@ -7,6 +7,8 @@ import './app.css'
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import SearchPool from '../search-pool'
+import WelcomePage from '../welcome-page'
+import NotFound from "../not-found";
 
 export default class App extends Component {
 
@@ -18,12 +20,10 @@ export default class App extends Component {
                         const { pathname } = history.location
                         return <Header pathname={pathname} />
                     }} />
-                    <div className="title">
-                        <h2>Most Popular News</h2>
-                    </div>
+
                     <div className="cards row justify-content-center">
                         <Switch>
-                            <Route path="/" exact component={} />
+                            <Route path="/" exact component={WelcomePage} />
 
                             <Route path="/:category" exact render={({ match }) => {
                                 const { category } = match.params
@@ -34,6 +34,8 @@ export default class App extends Component {
                                 const { query } = match.params
                                 return <SearchPool searchQuery={query} />
                             }} />
+
+                            <Route component={NotFound}/>
                         </Switch>
                     </div>
                 </Router>

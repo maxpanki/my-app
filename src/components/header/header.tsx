@@ -46,7 +46,7 @@ export default class Header extends Component<headerProps, headerState>{
     render() {
         const { currentLocation } = this.state
         return (
-            <nav className="navbar navbar-expand-lg navbar-light bg-light">
+            <nav className="navbar navbar-expand-lg navbar-light bg-light header">
                 <Link to={`/${Categories.CATEGORY1}`} className="navbar-brand">NewsAPI</Link>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03"
                         aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">

@@ -43,11 +43,8 @@ export default class NewsCardsPool extends Component<NewsCardsPoolProps, NewsCar
 
     updateNews(){
         const { currentCategory } = this.props
-        console.log(newsData)
         if(typeof newsData[currentCategory] === "undefined"){
-            console.log('tacking')
             this.newsService.getAllData().then(() => {
-                console.log('tacken')
                 this.setState({
                     newsList: newsData[currentCategory],
                     loader: false
